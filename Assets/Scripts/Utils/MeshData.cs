@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using Map.Texturing;
 using UnityEngine;
 
-namespace Map
+namespace Utils
 {
     public class MeshData
     {
@@ -46,7 +47,7 @@ namespace Map
             _mesh.MarkDynamic();
         }
 
-        public void CreateFace(Vector3 corner, Vector3 up, Vector3 right)
+        public void CreateFace(Vector3 corner, Vector3 up, Vector3 right, TileTexture tileTexture)
         {
             int tIndex = _verts.Count;
 
@@ -62,10 +63,8 @@ namespace Map
             _tris.Add(tIndex + 3);
             _tris.Add(tIndex + 0);
 
-            _uvs.Add(new Vector2(0, 0));
-            _uvs.Add(new Vector2(0, 1));
-            _uvs.Add(new Vector2(1, 1));
-            _uvs.Add(new Vector2(1, 0));
+            _uvs.AddRange(tileTexture.GetUVs());
+
         }
 
         public void Clear()
@@ -77,7 +76,5 @@ namespace Map
             _meshInitialized = false;
             _mesh.Clear(false);
         }
-
-        
     }
 }

@@ -11,6 +11,13 @@ public static class SettingsManager
     public const int ViewRange = 128;
 
     // Noise
-    public const float NoiseScale = 90.3f;
-    public const float NoiseMultiplier = 12.2f;
+    public const float NoiseHeightmapScale = 90.3f;
+    public const float NoiseHeightmapMultiplier = 12.2f;
+    public const float NoiseBiomeScale = 398.333f;
+    public const float NoiseBiomeMultiplier = 1f;
+
+    // Tilemap
+    public const int TilemapSize = 512;
+    public const int TileSize = 16;
+    public const float TileRatio = 0.03125F; // 1f / (TilemapSize / TileSize)
 }

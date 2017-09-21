@@ -8,6 +8,7 @@ namespace Map
     {
         [SerializeField] private GameObject _chunkPrefab;
         [SerializeField] private Transform _playerTransform;
+        [SerializeField] private Texture _tilemap;
 
         private Dictionary<Vector3, Chunk> _chunks;
 
@@ -121,6 +122,7 @@ namespace Map
             chunk.gameObject.transform.position = pos;
 
             chunk.Init(pos, _extantNoise);
+            chunk.SetTilemap(_tilemap);
             chunk.QueueCalculation();
 
             _chunks.Add(pos, chunk);

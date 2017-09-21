@@ -151,6 +151,7 @@ MonoBehaviour:
   _chunkPrefab: {fileID: 1274370356609080, guid: 2a7f16405fb041b4e98812fd71aa23f6,
     type: 2}
   _playerTransform: {fileID: 274696691}
+  _tilemap: {fileID: 2800000, guid: 5505652ef61e6c24084f53a6ab090446, type: 3}
 --- !u!1 &274696690
 GameObject:
   m_ObjectHideFlags: 0
