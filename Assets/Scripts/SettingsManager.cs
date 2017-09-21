@@ -7,7 +7,7 @@ public static class SettingsManager
     
     // World performance
     public const int ChunkOperationsPerFrame = 999;
-    public const int MaxChunkCalculationThread = 2;
+    public const int MaxChunkCalculationThread = 4;
     public const int ViewRange = 128;
 
     // Noise
